@@ -19,6 +19,9 @@ v2
 - zebra_webhook_customer_created
 - zebra_webhook_customer_updated
 - zebra_webhook_customer_deleted
+- zebra_webhook_customer_card_created
+- zebra_webhook_customer_card_updated
+- zebra_webhook_customer_card_deleted
 - zebra_webhook_customer_subscription_created
 - zebra_webhook_customer_subscription_updated
 - zebra_webhook_customer_subscription_deleted
@@ -64,6 +67,9 @@ zebra_webhook_charge_disputed = django.dispatch.Signal(providing_args=WEBHOOK2_A
 zebra_webhook_customer_created = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
 zebra_webhook_customer_updated = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
 zebra_webhook_customer_deleted = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
+zebra_webhook_customer_card_created = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
+zebra_webhook_customer_card_updated = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
+zebra_webhook_customer_card_deleted = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
 zebra_webhook_customer_subscription_created = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
 zebra_webhook_customer_subscription_updated = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
 zebra_webhook_customer_subscription_deleted = django.dispatch.Signal(providing_args=WEBHOOK2_ARGS)
@@ -96,6 +102,9 @@ WEBHOOK_MAP = {
     'customer_created': zebra_webhook_customer_created,
     'customer_updated': zebra_webhook_customer_updated,
     'customer_deleted': zebra_webhook_customer_deleted,
+    'customer_card_created': zebra_webhook_customer_card_created,
+    'customer_card_updated': zebra_webhook_customer_card_updated,
+    'customer_card_deleted': zebra_webhook_customer_card_deleted,
     'customer_subscription_created': zebra_webhook_customer_subscription_created,
     'customer_subscription_updated': zebra_webhook_customer_subscription_updated,
     'customer_subscription_deleted': zebra_webhook_customer_subscription_deleted,
